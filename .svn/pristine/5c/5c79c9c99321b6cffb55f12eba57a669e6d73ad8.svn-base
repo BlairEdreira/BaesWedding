@@ -1,0 +1,26 @@
+﻿
+    <style>
+        html, body {
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .img {
+            height: 100vh;
+            background-image: url('/Content/images/blairavery3.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: left;
+        }
+    </style>
+
+    <div class="row img">
+        <div class="col-lg-12 text-center">
+            <h1>WEBSITE COMING SOON!</h1>
+            <h3>check back later!</h3>
+        </div>
+    </div>
+
+
+
+

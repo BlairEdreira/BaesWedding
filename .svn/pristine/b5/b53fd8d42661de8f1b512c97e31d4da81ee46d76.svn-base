@@ -1,0 +1,18 @@
+﻿.rsvp_answer {
+  color: #192231;
+  border: 1px solid #d3d3d3;
+  padding: 12px 17px; }
+  .rsvp_answer.active {
+    color: #fff;
+    border: 0px solid #192231;
+    background-color: #192231; }
+  .rsvp_answer:hover {
+    cursor: pointer; }
+
+.rsvp_container label {
+  font-weight: 600; }
+
+.rsvp_submit input {
+  width: 100%;
+  padding: 20px; }
+

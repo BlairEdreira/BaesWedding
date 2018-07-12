@@ -1,0 +1,61 @@
+﻿using baeswedding.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace baeswedding.Controllers
+{
+    public class SharedController : Controller
+    {
+        // GET: Shared
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        [ChildActionOnly]
+        public ActionResult _RSVP(string nulldata)
+        {
+            return PartialView("_RSVP", nulldata);
+        }
+
+        [ChildActionOnly]
+        public ActionResult _Navigation(string nulldata)
+        {
+            return PartialView("_Navigation", nulldata);
+        }
+
+        [AcceptVerbs("POST")]
+        public void AddGuest(int id, FormCollection form)
+        {
+            GuestModel guest = new GuestModel();
+
+            guest.FirstName = form
+
+            page.bannerOverlayClass = form["ddlOverlayColor"];
+            page.dateCreated = DateTime.Parse(form["hdnDateCreated"]);
+            page.enabled = true;
+            page.pageContent = "";
+            page.pageContentWrapperClass = "";
+            page.pageOverlayBorderClass = form["ddlPageBorder"];
+            page.pagePathToFile = form["txtFilePath"];
+            page.pageRoute = form["txtRoute"];
+            page.PagesID = id;
+            page.pageSlug = form["txtSlug"];
+            page.pageSubtitle = form["txtPageSubtitle"];
+            page.pageSubtitleClass = subHeaderClass;
+            page.pageTitle = form["txtPageTitle"];
+            page.pageTitleClass = headerClass;
+
+            string result = Globals.PutAPIData("api/PutPage", page);
+
+            if (result.Equals("API Error"))
+            {
+                Response.StatusCode = 400;
+                Response.StatusDescription = "There was a problem saving the page. Please try again later.";
+            }
+
+        }
+    }

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<baeswedding.Models.Comments>
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+    ViewBag.Title = "Index";
+}
+@foreach (var comment in Model)
+{
+    <h1> @comment.comment</h1>
+    <h3> @comment.CommentDate.ToUniversalTime().ToString("MMM dd, yyy @ hh:mm tt")</h3>
+}
+
+
+<form id="commentForm">
+    <div class="col-12">
+        <div class="form-group">
+            <label for="comment">Write a comment</label>
+            <textarea type="text" class="form-control" id="comment" name="comment" required></textarea>
+        </div>
+    </div>
+
+    <div class="col-6 offset-3 comment_submit">
+        <input id="submit_comment" type="submit" class="btn " value="Send" />
+    </div>
+</form>

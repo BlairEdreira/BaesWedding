@@ -1,0 +1,111 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
+
+namespace baeswedding.Models
+{
+    public class SQL
+    {
+        private SqlConnection con;
+        private void connection()
+        {
+            string constring = ConfigurationManager.ConnectionStrings["connBae"].ToString();
+            con = new SqlConnection(constring);
+        }
+        public List<GuestModel> GetGuests()
+        {
+            connection();
+            List<GuestModel> guestlist = new List<GuestModel>();
+
+            SqlCommand cmd = new SqlCommand("GetGuests", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter sd = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            con.Open();
+            sd.Fill(dt);
+            con.Close();
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                guestlist.Add(
+                    new GuestModel
+                    {
+                        GuestID = Convert.ToInt32(dr["GuestID"]),
+                        LastName = Convert.ToString(dr["LastName"]),
+                        FirstName = Convert.ToString(dr["FirstName"]),
+                        Email = Convert.ToString(dr["Email"]),
+                        Comment = Convert.ToString(dr["Email"]),
+                        Guest_1_Fname = Convert.ToString(dr["Email"]),
+                        Guest_1_Lname = Convert.ToString(dr["Email"]),
+                        Guest_2_Fname = Convert.ToString(dr["Email"]),
+                        Guest_2_Lname = Convert.ToString(dr["Email"]),
+                        Guest_3_Fname = Convert.ToString(dr["Email"]),
+                        Guest_3_Lname = Convert.ToString(dr["Email"]),
+                        Guest_4_Fname = Convert.ToString(dr["Email"]),
+                        Guest_4_Lname = Convert.ToString(dr["Email"]),
+                        Guest_5_Fname = Convert.ToString(dr["Email"]),
+                        Guest_5_Lname = Convert.ToString(dr["Email"]),
+                        Guest_6_Fname = Convert.ToString(dr["Email"]),
+                        Guest_6_Lname = Convert.ToString(dr["Email"]),
+                        Guest_7_Fname = Convert.ToString(dr["Email"]),
+                        Guest_7_Lname = Convert.ToString(dr["Email"]),
+                        Guest_8_Fname = Convert.ToString(dr["Email"]),
+                        Guest_8_Lname = Convert.ToString(dr["Email"]),
+                        Guest_9_Fname = Convert.ToString(dr["Email"]),
+                        Guest_9_Lname = Convert.ToString(dr["Email"]),
+                        Guest_10_Fname = Convert.ToString(dr["Email"]),
+                        Guest_10_Lname = Convert.ToString(dr["Email"])
+                    });
+            }
+            return guestlist;
+        }
+
+        public bool AddGuest(GuestModel gmodel)
+        {
+            connection();
+            SqlCommand cmd = new SqlCommand("AddNewGuest", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@lname", gmodel.LastName);
+            cmd.Parameters.AddWithValue("@fname", gmodel.FirstName);
+            cmd.Parameters.AddWithValue("@email", gmodel.Email);
+            cmd.Parameters.AddWithValue("@comment", gmodel.Comment);
+            cmd.Parameters.AddWithValue("@guestfn_1", gmodel.Guest_1_Fname);
+            cmd.Parameters.AddWithValue("@guestln_1", gmodel.Guest_1_Lname);
+            cmd.Parameters.AddWithValue("@guestfn_2", gmodel.Guest_2_Fname);
+            cmd.Parameters.AddWithValue("@guestln_2", gmodel.Guest_2_Lname);
+            cmd.Parameters.AddWithValue("@guestfn_3", gmodel.Guest_3_Fname);
+            cmd.Parameters.AddWithValue("@guestln_3", gmodel.Guest_3_Lname);
+            cmd.Parameters.AddWithValue("@guestfn_4", gmodel.Guest_4_Fname);
+            cmd.Parameters.AddWithValue("@guestln_4", gmodel.Guest_4_Lname);
+            cmd.Parameters.AddWithValue("@guestfn_5", gmodel.Guest_5_Fname);
+            cmd.Parameters.AddWithValue("@guestln_5", gmodel.Guest_5_Lname);
+            cmd.Parameters.AddWithValue("@guestfn_6", gmodel.Guest_6_Fname);
+            cmd.Parameters.AddWithValue("@guestln_6", gmodel.Guest_6_Lname);
+            cmd.Parameters.AddWithValue("@guestfn_7", gmodel.Guest_7_Fname);
+            cmd.Parameters.AddWithValue("@guestln_7", gmodel.Guest_7_Lname);
+            cmd.Parameters.AddWithValue("@guestfn_8", gmodel.Guest_8_Fname);
+            cmd.Parameters.AddWithValue("@guestln_8", gmodel.Guest_8_Lname);
+            cmd.Parameters.AddWithValue("@guestfn_9", gmodel.Guest_9_Fname);
+            cmd.Parameters.AddWithValue("@guestln_9", gmodel.Guest_9_Lname);
+            cmd.Parameters.AddWithValue("@guestfn_10", gmodel.Guest_10_Fname);
+            cmd.Parameters.AddWithValue("@guestln_10", gmodel.Guest_10_Lname);
+
+
+
+            con.Open();
+            int i = cmd.ExecuteNonQuery();
+            con.Close();
+
+            if (i >= 1)
+                return true;
+            else
+                return false;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+﻿//------------------------------------------------GLOBALS------------------------------------------------
+$color_lightgrey: #d3d3d3;
+$color_grey: #494E6B;
+$color_brown: #98878F;
+$color_red: #985E6D;
+$color_blue: #192231;
+$color_white: #fff;
+
+
+//------------------------------------------------RSVP------------------------------------------------
+.rsvp_answer {
+    color: $color_blue;
+    border: 1px solid $color_lightgrey;
+    padding: 12px 17px;
+
+    &.active {
+        color: $color_white;
+        border: 0px solid $color_blue;
+        background-color: $color_blue;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.rsvp_container{
+    label{
+        font-weight: 600 ;
+    }
+}
+.rsvp_submit {
+    input {
+        width: 100%;
+        padding: 20px;
+       
+    }
+}

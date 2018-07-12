@@ -1,0 +1,65 @@
+﻿<div class="row mobile-nav">
+    <div class="col-12 text-center py-2">
+        <p class="pull-left m-0">April 14, 2018 <span class="pl-1">Fishkill, NY</span></p>
+        <button class="mobile-btn pull-right">
+            <i class="fa fa-bars"></i>
+        </button>
+    </div>
+    <div class="col-12 text-center p-2">
+        <h1>Blair & Avery</h1>
+    </div>
+</div>
+
+<div class="mobile-menu">
+    <div class="row">
+        <div class="col-12 py-3 px-4">
+            <button class="mobile-close pull-right">
+                <i class="fa fa-close"></i>
+            </button>
+        </div>
+        <div class="col-lg-12 text-center">
+            <p class=" m-0 countdown"></p>
+        </div>
+        <div class="col-12 text-left">
+            <ul>
+                <li>
+                    <a class="nav-link" href="#orderofeventsanchor">Order of Events</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#reservationsanchor">Reservations</a>
+                </li>
+                <li>
+                    <a class="nav-link " href="#registryanchor">Registry</a>
+                </li>
+                <li>
+                    <a class="nav-link " href="#bridalpartyanchor">Bridal Party</a>
+                </li>
+     
+                @*<li>
+                    <a class="nav-link " href="#photosanchor">Photos</a>
+                </li>*@
+                <li>
+                    <a class="nav-link " href="#updatesanchor">Updates</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="/Scripts/jquery-3.2.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        //mobile btn
+        $('.mobile-btn').click(function () {
+            $('.mobile-menu').addClass('active');
+        })
+
+        $('.mobile-close').click(function () {
+            $('.mobile-menu').removeClass('active');
+        })
+
+        $('.mobile-menu .nav-link').click(function () {
+            $('.mobile-menu').removeClass('active');
+        })
+    })
+</script>

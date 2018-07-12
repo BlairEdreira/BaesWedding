@@ -1,0 +1,11 @@
+﻿@model IEnumerable<baeswedding.Models.GuestModel>
+@{
+    ViewBag.Title = "Guests";
+}
+
+<h2>Index</h2>
+@foreach (var guest in Model)
+{
+    @guest.FirstName;
+    @guest.Attending;
+}

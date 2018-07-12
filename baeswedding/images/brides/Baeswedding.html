@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://localhost:49691/averyadmin/comments -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baeswedding</title>
+    <link href="./Baeswedding_files/css" rel="stylesheet">
+    
+    <link href="./Baeswedding_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./Baeswedding_files/font-awesome.min.css" rel="stylesheet">
+    <link href="./Baeswedding_files/toastr.min.css" rel="stylesheet">
+    <link href="./Baeswedding_files/site.min.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            background-size: cover;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-image: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        
+
+
+<div class="row mt-5 mb-5">
+    <div class="col-lg-12">
+        <div class="card header_card">
+            <div class="card-header">
+                <h3>Add Comment</h3>
+            </div>
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form id="commentForm" novalidate="novalidate">
+                            <div class="form-group">
+                                <label for="comment">Write a Message</label>
+                                <textarea type="text" class="form-control valid" id="comment" name="comment" required="" aria-required="true" aria-invalid="false"></textarea>
+                            </div>
+                            <input id="submit_comment" type="submit" class="btn btn-success float-right" value="Send">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <h1>10</h1>
+        <h1>We are looking forward to seeing all of you!</h1>
+        <h1>12/9/2017 1:16:24 PM</h1>
+
+    <script src="./Baeswedding_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Baeswedding_files/jquery.validate.min.js.download"></script>
+    <script>
+    // COMMENTS
+    $("#commentForm").validate({
+        rules: {
+            comment: "required"
+        },
+        messages: {
+            comment: "Enter a comment!",
+        },
+        submitHandler: function () {
+
+            var comment = ($('#comment').val() ? $('#comment').val() : "none");
+            $.ajax({
+                type: "POST",
+                url:  '/AddComment',
+                dataType: "HTML",
+                data: {
+                    Comment: comment
+                },
+                success: function () {
+                    window.location.reload();
+                },
+                error: function () {
+                    window.location.reload();
+                }
+            });
+
+        }
+    })
+    </script>
+
+    </div>
+
+    <script src="./Baeswedding_files/tether.min.js.download"></script>
+    <script src="./Baeswedding_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Baeswedding_files/jquery.validate.min.js.download"></script>
+    <script src="./Baeswedding_files/bootstrap.min.js.download"></script>
+    <script src="./Baeswedding_files/toastr.min.js.download"></script>
+    <script src="./Baeswedding_files/packery.pkgd.min.js.download"></script>
+    
+    <script src="./Baeswedding_files/site.min.js.download"></script>
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Chrome","requestId":"67b76f0a248d441ba98c8c633351ad6d"}
+</script>
+<script type="text/javascript" src="./Baeswedding_files/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+
+</div></body></html>

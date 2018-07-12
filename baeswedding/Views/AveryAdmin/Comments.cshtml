@@ -1,0 +1,92 @@
+﻿@model IEnumerable<baeswedding.Models.CommentModel>
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+    ViewBag.Title = "Index";
+}
+
+
+<div class="row mt-5 mb-5">
+    <div class="col-lg-12">
+        <div class="card header_card">
+            <div class="card-header">
+                <h3>Add Comment</h3>
+            </div>
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form id="commentForm">
+                            <div class="form-group">
+                                <label for="comment">Write a Message</label>
+                                <textarea type="text" class="form-control" id="comment" name="comment" required></textarea>
+                            </div>
+                            <input id="submit_comment" type="submit" class="btn btn-success float-right" value="Send" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5 mb-5 justify-content-center">
+    <div class="col-lg-6">
+        <div class="row ">
+            <div class="col-lg-12 text-center mb-4 guest_section">
+                <h3>Comments</h3>
+            </div>
+            @foreach (var comment in Model.OrderByDescending(i => i.CommentDate))
+            {
+                <div class="col-lg-12 mt-4 guest_card attending_card">
+                    <div class="card">
+                        <div class="card-header p-0">
+                        </div>
+                        <div class="card-block admin_guest_container">
+                            <div class="card-title mt-3 mb-3">
+                                <p><i class="fa fa-quote-left mr-2"></i>@(comment.Comment)</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <h6 class="pull-left">Date: @comment.CommentDate.ToUniversalTime().ToString("MMM dd, yyy @ hh:mm tt")</h6>
+                        </div>
+                    </div>
+
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+
+<script src="/Scripts/jquery-3.2.1.min.js"></script>
+<script src="/Scripts/jquery.validate.min.js"></script>
+<script>
+    // COMMENTS
+    $("#commentForm").validate({
+        rules: {
+            comment: "required"
+        },
+        messages: {
+            comment: "Enter a comment!",
+        },
+        submitHandler: function () {
+
+            var comment = ($('#comment').val() ? $('#comment').val() : "none");
+            $.ajax({
+                type: "POST",
+                url:  '@Url.Action("AddComment","Shared")',
+                dataType: "HTML",
+                data: {
+                    Comment: comment
+                },
+                success: function () {
+                    window.location.reload();
+                },
+                error: function () {
+                    window.location.reload();
+                }
+            });
+
+        }
+    })
+</script>

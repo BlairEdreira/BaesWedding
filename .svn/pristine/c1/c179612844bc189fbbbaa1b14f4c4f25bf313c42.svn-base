@@ -1,0 +1,36 @@
+﻿<div class="navbar fixed-top">
+    <div class="row">
+        <div class="col-lg-12">
+            <p class="pull-left m-0">April 14, 2018 <span class="pl-3">Fishkill, NY</span></p>
+            <p class="pull-right m-0 countdown"></p>
+        </div>
+        <div class="col-lg-12 text-center pt-2 pb-2">
+            <h1 class="blairandavery">Blair & Avery</h1>
+        </div>
+        <div class="col-lg-12 text-center">
+            <ul class="nav justify-content-center">
+                <li id="openRSVP" class="nav-item">
+                    <a class="nav-link active" href="#">RSVP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#orderofeventsanchor">Order of Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#reservationsanchor">Reservations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#bridalpartyanchor">Bridal Party</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#registryanchor">Registry</a>
+                </li>
+                @*<li class="nav-item">
+                    <a class="nav-link " href="#photosanchor">Photos</a>
+                </li>*@
+                <li class="nav-item">
+                    <a class="nav-link " href="#updatesanchor">Updates</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

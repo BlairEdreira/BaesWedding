@@ -1,0 +1,57 @@
+﻿@model IEnumerable<baeswedding.Models.CommentModel>
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+    ViewBag.Title = "Index";
+}
+
+@foreach (var comment in Model)
+{
+    <h1>@comment.CommentID</h1>
+    <h1>@comment.Comment</h1>
+    <h1>@comment.CommentDate</h1>
+}
+
+<form id="commentForm">
+    <div class="col-12">
+        <div class="form-group">
+            <label for="comment">Write a Message</label>
+            <textarea type="text" class="form-control" id="comment" name="comment" required></textarea>
+        </div>
+    </div>
+    <div class="col-6 offset-3 text-center">
+        <input id="submit_comment" type="submit" class="btn " value="Send" />
+    </div>
+</form>
+
+<script src="/Scripts/jquery-3.2.1.min.js"></script>
+<script src="/Scripts/jquery.validate.min.js"></script>
+<script>
+    // COMMENTS
+    $("#commentForm").validate({
+        rules: {
+            comment: "required"
+        },
+        messages: {
+            comment: "Enter a comment!",
+        },
+        submitHandler: function () {
+
+            var comment = ($('#comment').val() ? $('#comment').val() : "none");
+            $.ajax({
+                type: "POST",
+                url:  '@Url.Action("AddComment","Shared")',
+                dataType: "HTML",
+                data: {
+                    Comment: comment
+                },
+                success: function () {
+                    window.location.reload();
+                },
+                error: function () {
+                    window.location.reload();
+                }
+            });
+
+        }
+    })
+</script>

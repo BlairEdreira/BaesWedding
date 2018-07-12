@@ -1,0 +1,162 @@
+﻿using baeswedding.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Web.Mvc;
+
+namespace baeswedding.Controllers
+{
+    public class SharedController : Controller
+    {
+        private SqlConnection con;
+        private void connection()
+        {
+            string constring = ConfigurationManager.ConnectionStrings["connBae"].ToString();
+            con = new SqlConnection(constring);
+        }
+        // GET: Shared
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        [ChildActionOnly]
+        public ActionResult _RSVP(string nulldata)
+        {
+            return PartialView("_RSVP", nulldata);
+        }
+
+        [ChildActionOnly]
+        public ActionResult _Navigation(string nulldata)
+        {
+            return PartialView("_Navigation", nulldata);
+        }
+
+        
+
+
+        [HttpPost]
+        public ActionResult AddGuest(GuestModel gmodel)
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["connBae"].ToString());
+            con.Open();
+            SqlCommand cmd = new SqlCommand("AddNewGuest", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@lname", gmodel.LastName);
+            cmd.Parameters.AddWithValue("@fname", gmodel.FirstName);
+            cmd.Parameters.AddWithValue("@email", gmodel.Email);
+            cmd.Parameters.AddWithValue("@comment", gmodel.Comment);
+            cmd.Parameters.AddWithValue("@guestfn_1", gmodel.Guest_1_Fname);
+            cmd.Parameters.AddWithValue("@guestln_1", gmodel.Guest_1_Lname);
+            cmd.Parameters.AddWithValue("@guestfn_2", gmodel.Guest_2_Fname);
+            cmd.Parameters.AddWithValue("@guestln_2", gmodel.Guest_2_Lname);
+            cmd.Parameters.AddWithValue("@guestfn_3", gmodel.Guest_3_Fname);
+            cmd.Parameters.AddWithValue("@guestln_3", gmodel.Guest_3_Lname);
+            cmd.Parameters.AddWithValue("@guestfn_4", gmodel.Guest_4_Fname);
+            cmd.Parameters.AddWithValue("@guestln_4", gmodel.Guest_4_Lname);
+            cmd.Parameters.AddWithValue("@guestfn_5", gmodel.Guest_5_Fname);
+            cmd.Parameters.AddWithValue("@guestln_5", gmodel.Guest_5_Lname);
+            cmd.Parameters.AddWithValue("@guestfn_6", gmodel.Guest_6_Fname);
+            cmd.Parameters.AddWithValue("@guestln_6", gmodel.Guest_6_Lname);
+            cmd.Parameters.AddWithValue("@guestfn_7", gmodel.Guest_7_Fname);
+            cmd.Parameters.AddWithValue("@guestln_7", gmodel.Guest_7_Lname);
+            cmd.Parameters.AddWithValue("@guestfn_8", gmodel.Guest_8_Fname);
+            cmd.Parameters.AddWithValue("@guestln_8", gmodel.Guest_8_Lname);
+            cmd.Parameters.AddWithValue("@guestfn_9", gmodel.Guest_9_Fname);
+            cmd.Parameters.AddWithValue("@guestln_9", gmodel.Guest_9_Lname);
+            cmd.Parameters.AddWithValue("@guestfn_10", gmodel.Guest_10_Fname);
+            cmd.Parameters.AddWithValue("@guestln_10", gmodel.Guest_10_Lname);
+            cmd.Parameters.AddWithValue("@attending", gmodel.Attending);
+
+            //cmd.Parameters.AddWithValue("@lname", gmodel.LastName);
+            //cmd.Parameters.AddWithValue("@fname", "test");
+            //cmd.Parameters.AddWithValue("@email", "test@gmail.com");
+            //cmd.Parameters.AddWithValue("@comment", "test");
+            //cmd.Parameters.AddWithValue("@guestfn_1", "test");
+            //cmd.Parameters.AddWithValue("@guestln_1", "test");
+            //cmd.Parameters.AddWithValue("@guestfn_2", "test");
+            //cmd.Parameters.AddWithValue("@guestln_2", "test");
+            //cmd.Parameters.AddWithValue("@guestfn_3", "test");
+            //cmd.Parameters.AddWithValue("@guestln_3", "test");
+            //cmd.Parameters.AddWithValue("@guestfn_4", "test");
+            //cmd.Parameters.AddWithValue("@guestln_4", "test");
+            //cmd.Parameters.AddWithValue("@guestfn_5", "test");
+            //cmd.Parameters.AddWithValue("@guestln_5", "test");
+            //cmd.Parameters.AddWithValue("@guestfn_6", "test");
+            //cmd.Parameters.AddWithValue("@guestln_6", "test");
+            //cmd.Parameters.AddWithValue("@guestfn_7", "test");
+            //cmd.Parameters.AddWithValue("@guestln_7", "test");
+            //cmd.Parameters.AddWithValue("@guestfn_8", "test");
+            //cmd.Parameters.AddWithValue("@guestln_8", "test");
+            //cmd.Parameters.AddWithValue("@guestfn_9", "test");
+            //cmd.Parameters.AddWithValue("@guestln_9", "test");
+            //cmd.Parameters.AddWithValue("@guestfn_10", "test");
+            //cmd.Parameters.AddWithValue("@guestln_10", "test");
+            //cmd.Parameters.AddWithValue("@attending", true);
+            cmd.ExecuteNonQuery();
+
+            con.Close();
+
+            return View("_RSVP");
+        }
+
+        //[ValidateInput(false)]
+        //[HttpPost]
+        //public JsonResult AddGuest(GuestModel guest, FormCollection form)
+        //{
+
+
+        //    guest.FirstName = form["response_fname"];
+        //    guest.LastName = form["response_lname"];
+        //    guest.Email = form["response_email"];
+        //    guest.Comment = form["response_comment"];
+        //    guest.Guest_1_Fname = form["response_guest_1_fname"];
+        //    guest.Guest_1_Lname = form["response_guest_1_lname"];
+        //    guest.Guest_2_Fname = form["response_guest_2_fname"];
+        //    guest.Guest_2_Lname = form["response_guest_2_lname"];
+        //    guest.Guest_3_Fname = form["response_guest_3_fname"];
+        //    guest.Guest_3_Lname = form["response_guest_3_lname"];
+        //    guest.Guest_4_Fname = form["response_guest_4_fname"];
+        //    guest.Guest_4_Lname = form["response_guest_4_lname"];
+        //    guest.Guest_5_Fname = form["response_guest_5_fname"];
+        //    guest.Guest_5_Lname = form["response_guest_5_lname"];
+        //    guest.Guest_6_Fname = form["response_guest_6_fname"];
+        //    guest.Guest_6_Lname = form["response_guest_6_lname"];
+        //    guest.Guest_7_Fname = form["response_guest_7_fname"];
+        //    guest.Guest_7_Lname = form["response_guest_7_lname"];
+        //    guest.Guest_8_Fname = form["response_guest_8_fname"];
+        //    guest.Guest_8_Lname = form["response_guest_8_lname"];
+        //    guest.Guest_9_Fname = form["response_guest_9_fname"];
+        //    guest.Guest_9_Lname = form["response_guest_9_lname"];
+        //    guest.Guest_10_Fname = form["response_guest_10_fname"];
+        //    guest.Guest_10_Lname = form["response_guest_10_lname"];
+
+        //    if (form["rsvp_YESorNO"] == "true")
+        //    {
+        //        guest.Attending = true;
+        //    }
+        //    else
+        //    {
+        //        guest.Attending = false;
+        //    }
+
+
+
+        //    return Json(guest);
+
+        //    //if (result.Equals("API Error"))
+        //    //{
+        //    //    Response.StatusCode = 400;
+        //    //    Response.StatusDescription = "There was a problem saving the page. Please try again later.";
+        //    //}
+
+        //}
+
+
+    }
+}

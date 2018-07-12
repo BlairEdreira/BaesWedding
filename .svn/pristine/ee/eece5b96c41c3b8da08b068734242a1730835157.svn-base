@@ -1,0 +1,315 @@
+﻿//------------------------------------------------GLOBALS------------------------------------------------
+$color_lightgrey: #d3d3d3;
+$color_grey: #494E6B;
+$color_brown: #98878F;
+$color_red: #985E6D;
+$color_blue: #192231;
+$color_white: #fff;
+
+body {
+    /*font-family: 'Kalam', cursive;*/
+    font-family: 'Dancing Script', cursive;
+    overflow-x: hidden;
+    background-size: cover;
+    background-position: top left;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-image: url("/Content/images/blairavery3_top.png");
+}
+
+.shrink {
+    transition: all linear .25s;
+    font-size: 35px;
+}
+.navshrink {
+    max-height: 135px;
+    transition: all linear .25s;
+}
+
+.scrollanchor {height: 150px;}
+
+.btn,
+button {
+    font-family: inherit;
+    outline: none;
+    border: none;
+    box-shadow: none;
+
+    &.active {
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    &:hover {
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    &:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+}
+
+.spacer {
+    height: 150px;
+}
+
+.sub_sections_outer {
+}
+
+.sub_sections {
+    background-color: rgba(255,255,255,.8);
+    padding: 20px;
+}
+
+.section_title {
+    padding: 0 50px;
+
+    h1 {
+        padding: 0;
+        padding-top: 5px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid black;
+    }
+}
+
+.section_row {
+    padding-bottom: 50px;
+    margin-bottom: 0px;
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    a {
+        margin-bottom: 10px;
+        border: 2px solid black;
+        border-radius: 0;
+        width: 50%;
+        color: black;
+
+        &:hover, &:focus, &.active {
+            margin-bottom: 10px;
+            border: 2px solid black;
+            border-radius: 0;
+            width: 50%;
+            color: white;
+            background-color: black;
+        }
+    }
+
+    .section_col_right {
+        padding: 20px 50px;
+        border-left: 3px solid black;
+    }
+
+    .section_col_left {
+        padding: 20px 50px;
+        border-right: 3px solid transparent;
+    }
+
+    img {
+        height: 50px;
+        width: 50px;
+    }
+}
+//------------------------------------------------NAV------------------------------------------------
+.navbar {
+    border-bottom: 1px solid black;
+    background-color: $color_white;
+    height: 150px;
+   li{
+       a{
+           color: $color_blue;
+       }
+   }
+    .countdown {
+        display: none;
+    }
+}
+//------------------------------------------------RSVP------------------------------------------------
+.btn_rsvp_outer {
+    position: relative;
+    height: 750px;
+
+
+    .btn_rsvp {
+        position: absolute;
+        padding: 25px 125px;
+        top: 40%;
+        left: calc(50% - 145px);
+        font-size: 25px;
+        background-color: rgba(255,255,255,.3);
+        border: 3px solid $color_blue;
+
+        &:hover,
+        &:focus,
+        &.active {
+            background-color: $color_blue;
+            border: 3px solid $color_blue;
+            color: white;
+        }
+    }
+
+    .rsvp_answer {
+        color: $color_blue;
+        border: 1px solid $color_lightgrey;
+        padding: 12px 17px;
+
+        &.active {
+            color: $color_white;
+            border: 0px solid $color_blue;
+            background-color: $color_blue;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .rsvp_container {
+        label {
+            font-weight: 600;
+        }
+
+        .response_header {
+            color: $color_grey;
+        }
+
+        .error {
+            font-size: 12px;
+            color: darkred;
+        }
+    }
+
+    .rsvp_submit {
+        input {
+            width: 100%;
+            padding: 20px;
+            background-color: $color_blue;
+            /*border: 3px solid $color_blue;*/
+            color: white;
+        }
+    }
+}
+//------------------------------------------------ADMIN------------------------------------------------
+.guest_card {
+
+    .card-header {
+        background-color: $color_white;
+        border: 2px solid $color_grey;
+        border-bottom: 1px solid $color_grey;
+    }
+
+    .card-footer {
+        background-color: $color_grey;
+        color: $color_white;
+        border: 2px solid $color_grey;
+        border-top: 0;
+    }
+
+    .card-block {
+        border: 2px solid $color_grey;
+        border-top: 0;
+        border-bottom: 0;
+    }
+}
+
+.admin_guest_container {
+    .sub_guest {
+        .details {
+            margin: 0;
+            padding: 5px 0;
+        }
+
+        h6 {
+            color: white;
+            background-color: $color_lightgrey;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        .details_container {
+            border: 1px solid $color_lightgrey;
+        }
+    }
+}
+
+.guest_section h3 {
+    background-color: $color_lightgrey;
+    padding: 50px 0;
+}
+
+.header_card {
+    .card-header {
+        background-color: $color_blue;
+        color: white;
+    }
+}
+//------------------------------------------------Reservations------------------------------------------------
+#reservations {
+    background-position: top left;
+    background-size:cover;
+    background-repeat: no-repeat;
+    /*background-image: url("/Content/images/blairavery1.png");*/
+}
+
+//------------------------------------------------Bridal PArty------------------------------------------------
+#bridalparty {
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-image: url("/Content/images/blairavery7.png");*/
+    .bpimg {
+        width: 350px;
+        height: 100%;
+        margin-bottom: 20px;
+    }
+
+    .jbpimg {
+        width: 250px;
+        height: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.titleicon {
+    width: 50px;
+    height: 100%;
+}
+
+
+.grid-item{
+    width: 20%;
+}
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}

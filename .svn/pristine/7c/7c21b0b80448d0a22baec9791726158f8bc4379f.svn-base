@@ -1,0 +1,12 @@
+﻿<div class="container-fluid">
+    @{Html.RenderAction("_Navigation", "Shared");}
+</div>
+
+
+<div class="container-fluid">
+    @{Html.RenderAction("_RSVP", "Shared");}
+</div>
+
+
+
+

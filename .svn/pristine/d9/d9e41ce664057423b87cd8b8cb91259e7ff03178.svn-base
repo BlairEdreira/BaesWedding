@@ -1,0 +1,113 @@
+﻿<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">RSVP</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+
+
+
+                    @*WILL YOU MAKE IT*@
+                    <div class="row text-center">
+                      <div class="col-lg-12">
+                          <div class="row">
+                              <div class="col-lg-3"></div>
+                              <div class="col-lg-3 rsvp_answer active">
+                                  Heck yeah, I'm going!
+                              </div>
+                              <div class="col-lg-3 rsvp_answer">
+                                  Oh no, can't make it.
+                              </div>
+                              <div class="col-lg-3"></div>
+                          </div>
+                      </div>
+                    </div>
+
+                    @*YES*@
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h2>Awesome.</h2>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="response_fname">*First Name</label>
+                                <input type="text" class="form-control" id="response_fname" required>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="response_lname">*Last Name</label>
+                                <input type="text" class="form-control" id="response_lname" required>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="response_email">Email</label>
+                                <input type="email" class="form-control" id="response_email" required>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-5">
+                                    <h6>Additional Guests</h6>
+                                </div>
+                                <div class="col-4 pull-left">
+                                    <select id="guest_select" class="form-control">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-12">
+                            <div id="guest_container" class="row">
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    @*NO*@
+                    <div class="row text-center">
+                        <div class="col-12">
+                            <h2>We'll have a drink for you!</h2>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-primary pull-right">Yes</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-primary pull-left">No</button>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

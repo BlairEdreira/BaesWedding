@@ -1,0 +1,496 @@
+﻿<div class="row justify-content-center">
+    <div class="col-lg-12 spacer"></div>
+
+    @*RSVP*@
+    <div class="col-lg-12 btn_rsvp_outer text-center mx-auto">
+        @{Html.RenderAction("_RSVP", "Shared");}
+    </div>
+    @*SCHEDULE*@
+    <div id="orderofeventsanchor" class="col-lg-12 scrollanchor"></div>
+    <div id="orderofevents" class="col-lg-8 sub_sections text-center">
+        <div class="row">
+            <div class="col-lg-12 section_title mb-5">
+                <h1>Order of Events</h1>
+            </div>
+
+            <div class="col-lg-12 section_row">
+                <div class="row h-100">
+                    <div class="col-lg-12 mb-2">
+                        <img src="~/images/icons/newlyweds.png" alt="Alternate Text" />
+                    </div>
+                    <div class="col-lg-6 m-auto section_col_left">
+                        <h1>The Ceremony</h1>
+
+                        <h5>Saturday, April 14th 2018</h5>
+                        <h5>2:30pm</h5>
+                    </div>
+                    <div class="col-lg-6 m-auto section_col_right">
+                        <h1>St.Mary Church</h1>
+                        <h5>106 Jackson Street</h5>
+                        <h5>Fishkill, NY 12524</h5>
+                        <p>Come join us in our union. There will be a bagpiper outside of the church as well as some handsome gents in full kilt attire.</p>
+                        <a class="btn" href="https://goo.gl/maps/mpe1FpY8UwR2" target="_blank">Map</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 section_row">
+                <div class="row h-100">
+                    <div class="col-lg-12 mb-2">
+                        <img src="~/images/icons/cake.png" alt="Alternate Text" />
+                    </div>
+                    <div class="col-lg-6 m-auto section_col_left">
+                        <h1>Cocktail Hour & Reception</h1>
+                        <h5>Saturday, April 14th 2018</h5>
+                        <h5>5:30pm - 10:30pm</h5>
+                    </div>
+                    <div class="col-lg-6 m-auto section_col_right">
+
+                        <h1>The Thayer Hotel</h1>
+                        <h5>General Washington Ballroom</h5>
+                        <h5>674 Thayer Road</h5>
+                        <h5>West Point, NY 10996</h5>
+                        <p>A night of dinner, dancing and drinks to celebrate the newly married couple!</p>
+                        <a class="btn" href="https://goo.gl/maps/ADQMcCPgrap" target="_blank">Map</a>
+                        <a class="btn" href="http://www.thethayerhotel.com/" target="_blank">Visit the Property</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 section_row">
+                <div class="row h-100">
+                    <div class="col-lg-12 mb-2">
+                        <img src="~/images/icons/champagne.png" alt="Alternate Text" />
+                    </div>
+                    <div class="col-lg-6 m-auto section_col_left">
+                        <h1>After Party</h1>
+                        <h5>Saturday, April 14th 2018</h5>
+                        <h5>10:30pm - 2:00am</h5>
+                    </div>
+                    <div class="col-lg-6 m-auto section_col_right">
+                        <h1>The Thayer Hotel</h1>
+                        <h5>Zulu Time Bar</h5>
+                        <p>Where the real party starts. This is a rooftop bar located directly above the reception hall. Sure to be a good time! if it is closed we will bring the party to an inside bar</p>
+                        <a class="btn" href="https://goo.gl/maps/ADQMcCPgrap" target="_blank">Map</a>
+                        <a class="btn" href="http://www.thethayerhotel.com/zulu-time-rooftop-bar-and-lounge.html" target="_blank">Visit the Room</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 section_row">
+                <div class="row h-100">
+                    <div class="col-lg-12 mb-2">
+                        <img src="~/images/icons/plate.png" alt="Alternate Text" />
+                    </div>
+                    <div class="col-lg-6 m-auto section_col_left">
+                        <h1>Brunch</h1>
+                        <h5>Sunday, April 15th 2018</h5>
+                        <h5>12:00pm - 2:00pm</h5>
+                    </div>
+                    <div class="col-lg-6 m-auto section_col_right">
+                        <h1>The Thayer Hotel</h1>
+                        <h5>General Dwight Eisenhower Room</h5>
+                        <p>After a night of partying we would hate to let you go hungry! Join us for a brunch the morning after.</p>
+                        <a class="btn" href="https://goo.gl/maps/ADQMcCPgrap" target="_blank">Map</a>
+                        <a class="btn" href="http://www.thethayerhotel.com/sunday-champagne-brunch.html" target="_blank">Visit the Room</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*RESERVATIONS*@
+    <div id="reservationsanchor" class="col-lg-12 scrollanchor"></div>
+    <div id="reservations" class="col-lg-12 text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 sub_sections text-center">
+                <div class="row">
+                    <div class="col-lg-12 section_title mb-5">
+                        <h1>Reservations</h1>
+                    </div>
+
+                    <div class="col-lg-12 section_row">
+                        <div class="row h-100">
+                            <div class="col-lg-12 mb-2">
+                                <img src="~/images/icons/reservations.png" alt="Alternate Text" />
+                            </div>
+                            <div class="col-lg-12 m-auto section_col_left">
+                                <h1>The Thayer Hotel</h1>
+                                <h5>Saturday, April 14th 2018</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 section_row">
+                        <div class="row h-100">
+                            <div class="col-lg-6 m-auto section_col_left">
+                                <h1>Discount Rooms Available</h1>
+                                <h5>Ask for the McLemore/Edreira wedding block</h5>
+                                <h6 class="text-center mt-5"><i class="fa fa-phone "></i> (845)-446-4731 <i class="fa fa-envelope ml-5"></i> info@thethayerhotel.com</h6>
+
+                            </div>
+                            <div class="col-lg-6 m-auto section_col_right">
+                                <a class="btn" href="https://goo.gl/maps/ADQMcCPgrap" target="_blank">Map</a>
+                                <a class="btn" href="http://www.thethayerhotel.com/rooms.html" target="_blank">Make a Reservation</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*REGISTRY*@
+    <div id="registryanchor" class="col-lg-12 scrollanchor"></div>
+    <div id="registry" class="col-lg-12 text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 sub_sections text-center">
+                <div class="row">
+                    <div class="col-lg-12 section_title mb-5">
+                        <h1>Registry</h1>
+                    </div>
+
+                    <div class="col-lg-12 section_row">
+                        <div class="row h-100">
+                            <div class="col-lg-12 mb-2">
+                                <img src="~/images/icons/gift.png" alt="Alternate Text" />
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-12 section_row">
+                        <div class="row h-100">
+                            <div class="col-lg-6 m-auto section_col_left">
+                                <h1>Bed Bath and Beyond</h1>
+                                <h5>Name: Avery McLemore & Blair Edreira</h5>
+                                <h5>ID: 545167438</h5>
+
+                            </div>
+                            <div class="col-lg-6 m-auto section_col_right">
+                                <h5>14 B Spring Valley Marketplace</h5>
+                                <h5>Spring Valley, NY 10977</h5>
+                                <p></p>
+                                <a class="btn" href="https://goo.gl/maps/ahHJC2me51D2" target="_blank">Map</a>
+                                <a class="btn" href="https://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&inventoryCallEnabled=true&registryId=545167438&pwsurl=" target="_blank">Online</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-12 section_row">
+                        <div class="row h-100">
+                            <div class="col-lg-6 m-auto section_col_left">
+                                <h1>Honeymoon Fund</h1>
+                                <h5>Thailand</h5>
+                            </div>
+                            <div class="col-lg-6 m-auto section_col_right">
+                                <h5>PayPal</h5>
+                                <p>You will need to set up an account to send money with paypal. Click the button below to send money.</p>
+                                <a class="btn" href="https://thevillage-coconutisland.com/" target="_blank">View Hotel</a>
+                                <a class="btn" href="https://www.paypal.me/BlairEdreira" target="_blank">Send Money</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @*BRIDAL PARTY - GROOM*@
+    <div id="bridalpartyanchor" class="col-lg-12 scrollanchor"></div>
+    <div id="bridalparty" class="col-lg-12  text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 sub_sections text-center">
+                <div class="row">
+                    @*GROOMS*@
+                    <div class="col-lg-12 section_title mb-5">
+                        <h1>Groomsmen <img class="titleicon" src="~/images/icons/kilt.png" alt="Alternate Text" /></h1>
+                    </div>
+
+                    <div class="col-lg-12 section_row">
+                        <div class="row h-100">
+
+                            <div class="col-lg-12 m-auto section_col_left">
+                                <h1>Tim O'Herron</h1>
+                                <img class="bpimg" src="~/images/grooms/tim.jpg" alt="Alternate Text" />
+                                <h4>Best Man</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 section_row">
+                        <div class="row h-100">
+                            <div class="col-lg-6 m-auto section_col_left">
+                                <h1>Mike Newman</h1>
+                                <img class="bpimg" src="~/images/grooms/mike.jpg" alt="Alternate Text" />
+                                <h4>Groomsman</h4>
+                            </div>
+                            <div class="col-lg-6 m-auto section_col_right">
+                                <h1>Sean Thackurdeen</h1>
+                                <img class="bpimg" src="~/images/grooms/sean.jpg" alt="Alternate Text" />
+                                <h4>Groomsman</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 section_row">
+                        <div class="row h-100">
+                            <div class="col-lg-6 m-auto section_col_left">
+                                <h1>Cameron Howie</h1>
+                                <img class="bpimg" src="~/images/grooms/cameron.jpg" alt="Alternate Text" />
+                                <h4>Groomsman</h4>
+                            </div>
+                            <div class="col-lg-6 m-auto section_col_right">
+                                <h1>Callum Howie</h1>
+                                <img class="bpimg" src="~/images/grooms/callum.jpg" alt="Alternate Text" />
+                                <h4>Groomsman</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 section_row">
+                        <div class="row h-100">
+                            <div class="col-lg-6 m-auto section_col_left">
+                                <h1>Fraser Howie</h1>
+                                <img class="bpimg" src="~/images/grooms/fraser.jpg" alt="Alternate Text" />
+                                <h4>Groomsman</h4>
+                            </div>
+                            <div class="col-lg-6 m-auto section_col_right">
+                                <h1>Jake Briendel</h1>
+                                <img class="bpimg" src="~/images/grooms/jake.jpg" alt="" />
+                                <h4>Groomsman</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    @*JUNIOR*@
+                    <div class="col-lg-12">
+                        <div class="row h-100">
+                            <div class="col-lg-12  mb-5">
+                                <h1>Junior Groomsmen</h1>
+                            </div>
+                            <div class="col-lg-4 m-auto">
+                                <img class="jbpimg" src="~/images/grooms/rylen.jpg" alt="Alternate Text" />
+                                <h4>Rylen Brown</h4>
+                            </div>
+                            <div class="col-lg-4 m-auto">
+                                <img class="jbpimg" src="~/images/grooms/ronan.jpg" alt="Alternate Text" />
+                                <h4>Ronan Malizia</h4>
+                            </div>
+                            <div class="col-lg-4 m-auto">
+                                <img class="jbpimg" src="~/images/grooms/zenon.jpg" alt="Alternate Text" />
+                                <h4>Zennon Nicholas</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="col-lg-12 spacer"></div>
+    @*BRIDAL PARTY - Bride*@
+    <div id="bridalparty" class="col-lg-12 pt-5 pb-5 text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 sub_sections text-center">
+                <div class="row">
+                    @*GROOMS*@
+                    <div class="col-lg-12 section_title mb-5">
+                        <h1>Bridesmaids <img class="titleicon" src="~/images/icons/dress.png" alt="Alternate Text" /></h1>
+                    </div>
+
+                    <div class="col-lg-12 section_row">
+                        <div class="row h-100">
+                            <div class="col-lg-12 m-auto section_col_left">
+                                <h1>Allie Bopp</h1>
+                                <img class="bpimg" src="~/images/brides/allie.jpg" alt="Alternate Text" />
+                                <h4>Maid of Honor</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 section_row">
+                        <div class="row h-100">
+                            <div class="col-lg-6 m-auto section_col_left">
+                                <h1>Devon McCaffrey</h1>
+                                <img class="bpimg" src="~/images/brides/devon.jpg" alt="Alternate Text" />
+                                <h4>Bridesmaid</h4>
+                            </div>
+                            <div class="col-lg-6 m-auto section_col_right">
+                                <h1>Gina Bonato</h1>
+                                <img class="bpimg" src="~/images/brides/gina.jpg" alt="Alternate Text" />
+                                <h4>Bridesmaid</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 section_row">
+                        <div class="row h-100">
+                            <div class="col-lg-6 m-auto section_col_left">
+                                <h1>Lauren O'Dell</h1>
+                                <img class="bpimg" src="~/images/brides/lauren.jpg" alt="Alternate Text" />
+                                <h4>Bridesmaid</h4>
+                            </div>
+                            <div class="col-lg-6 m-auto section_col_right">
+                                <h1>Zulenny Ellis</h1>
+                                <img class="bpimg" src="~/images/brides/zu.jpg" alt="Alternate Text" />
+                                <h4>Bridesmaid</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 section_row">
+                        <div class="row h-100">
+                            <div class="col-lg-6 m-auto section_col_left">
+                                <h1>Alexis Ocasio</h1>
+                                <img class="bpimg" src="~/images/brides/alexis.jpg" alt="Alternate Text" />
+                                <h4>Bridesmaid</h4>
+                            </div>
+                            <div class="col-lg-6 m-auto section_col_right">
+                                <h1>Rosie Edreira</h1>
+                                <img class="bpimg" src="~/images/brides/rosie.jpg" alt="Alternate Text" />
+                                <h4>Bridesmaid</h4>
+                            </div>
+                        </div>
+                    </div>
+                    @*JUNIOR*@
+                    <div class="col-lg-12">
+                        <div class="row h-100">
+                            <div class="col-lg-12  mb-5">
+                                <h1>Junior Maid of Honnor & Bridesmaids</h1>
+                            </div>
+                            <div class="col-lg-4 m-auto">
+                                <img class="jbpimg" src="~/images/brides/nyla.jpg" alt="Alternate Text" />
+                                <h4>Nyla Brown</h4>
+                            </div>
+                            <div class="col-lg-4 m-auto">
+                                <img class="jbpimg" src="~/images/brides/stefanie.jpg" alt="Alternate Text" />
+                                <h4>Stefanie Healy</h4>
+                            </div>
+                            <div class="col-lg-4 m-auto">
+                                <img class="jbpimg" src="~/images/brides/kira.jpg" alt="Alternate Text" />
+                                <h4>Keira Malizia</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="ring" class="col-lg-12 scrollanchor"></div>
+    <div id="ring" class="col-lg-12 pt-5 pb-5 text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 sub_sections text-center">
+                <div class="row">
+                    <div class="col-lg-12 section_title mb-5 mt-5">
+                        <h1>Flower Girl & Ring Bearer <img class="titleicon" src="~/images/icons/ring.png" alt="Alternate Text" /></h1>
+                    </div>
+                    @*FLOWER GIRL RING BEARER*@
+                    <div class="col-lg-12">
+                        <div class="row h-100 justify-content-center">
+
+                            <div class="col-lg-4 m-auto">
+                                <img class="jbpimg mb-3" src="~/images/brides/julianna.jpg" alt="Alternate Text" />
+                                <h4>Julianna Santrello</h4>
+                            </div>
+                            <div class="col-lg-4 m-auto">
+                                <img class="jbpimg mb-3" src="~/images/grooms/zachary.jpg" alt="Alternate Text" />
+                                <h4>Zachary Santrello</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    @*UPDATES*@
+    <div id="updatesanchor" class="col-lg-12 scrollanchor"></div>
+    <div id="updates" class="col-lg-12 text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 sub_sections text-center">
+                <div class="row">
+                    <div class="col-lg-12 section_title mb-5">
+                        <h1>Updates</h1>
+                    </div>
+                    <div class="col-lg-12 section_row">
+                        <div class="row h-100">
+                            <div class="col-lg-12 mb-2">
+                                <img src="~/images/icons/updates.png" alt="Alternate Text" />
+                            </div>
+                            <div class="col-lg-12 m-auto section_col_left">
+                                <h1>Get the Latest</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 section_row">
+                        <div class="row h-100">
+                            @{Html.RenderAction("_Comments", "Shared");}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    @*Pictures*@
+    <div id="photosanchor" class="col-lg-12 scrollanchor"></div>
+    <div id="registry" class="col-lg-12 text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+
+                <img class="m-3" src="~/images/photos/1.jpg" alt="Alternate Text" />
+
+                <img class="m-3" src="~/images/photos/2.jpg" alt="Alternate Text" />
+
+                <img class="m-3" src="~/images/photos/3.jpg" alt="Alternate Text" />
+
+                <img class="m-3" src="~/images/photos/4.jpg" alt="Alternate Text" />
+
+                <img class="m-3" src="~/images/photos/5.jpg" alt="Alternate Text" />
+
+                <img class="m-3" src="~/images/photos/6.jpg" alt="Alternate Text" />
+
+                <img class="m-3" src="~/images/photos/7.jpg" alt="Alternate Text" />
+
+                <img class="m-3" src="~/images/photos/8.jpg" alt="Alternate Text" />
+
+                <img class="m-3" src="~/images/photos/9.jpg" alt="Alternate Text" />
+
+                <img class="m-3" src="~/images/photos/10.jpg" alt="Alternate Text" />
+
+                <img class="m-3" src="~/images/photos/11.jpg" alt="Alternate Text" />
+
+                <img class="m-3" src="~/images/photos/12.jpg" alt="Alternate Text" />
+
+                <img class="m-3" src="~/images/photos/13.jpg" alt="Alternate Text" />
+
+                <img class="m-3" src="~/images/photos/14.jpg" alt="Alternate Text" />
+
+                <img class="m-3" src="~/images/photos/15.jpg" alt="Alternate Text" />
+
+                <img class="m-3" src="~/images/photos/16.jpg" alt="Alternate Text" />
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="col-lg-12 spacer"></div>
+</div>
+
+
+

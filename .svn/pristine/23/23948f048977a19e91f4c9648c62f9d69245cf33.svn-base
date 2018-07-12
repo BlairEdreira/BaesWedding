@@ -1,0 +1,7 @@
+﻿@model IEnumerable<baeswedding.Models.CommentModel>
+
+
+@foreach (var comment in Model)
+{
+    <h1>@comment.Comment</h1>
+}

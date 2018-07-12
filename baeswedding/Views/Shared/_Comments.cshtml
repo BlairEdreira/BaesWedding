@@ -1,0 +1,11 @@
+﻿@model IEnumerable<baeswedding.Models.CommentModel>
+
+    @foreach (var comment in Model.OrderByDescending(i => i.CommentDate))
+    {
+        <div class="col-lg-6 m-auto section_col_left">
+            <h5>@comment.CommentDate.ToUniversalTime().ToString("MMM dd, yyy")</h5>
+        </div>
+        <div class="col-lg-6 m-auto section_col_right">
+            <h5>@comment.Comment</h5>
+        </div>
+    }

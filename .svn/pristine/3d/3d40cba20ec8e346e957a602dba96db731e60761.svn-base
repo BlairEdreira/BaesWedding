@@ -1,0 +1,33 @@
+﻿$(document).ready(function () {
+    // going not going
+    $('.rsvp_answer').click(function () {
+            $('.rsvp_answer').removeClass('active');
+            $(this).addClass('active');
+       });
+    // guest number select
+    $('#guest_select').change(function () {
+        var count = $(this).val();
+        var htmlContent = "";
+        for (var i = 0; i < count; i++) {
+            htmlContent = htmlContent
+                + '<div class="col-lg-12">'
+                + '<h6>Guest ' + (i + 1) + '</h6>'
+                + '</div>'
+                + '<div class="col-6">'
+                + '<div class="form-group">'
+                + '<label for="response_fname">*First Name</label>'
+                + '<input type="text" class="form-control" id="response_fname" required>'
+                + '</div>'
+                + '</div>'
+                + '<div class="col-6">'
+                + '<div class="form-group">'
+                + '<label for="response_lname">*Last Name</label>'
+                + '<input type="text" class="form-control" id="response_lname" required>'
+                + '</div>'
+                + '</div>';
+
+        }
+        $('#guest_container').html(htmlContent);
+    });
+});
+

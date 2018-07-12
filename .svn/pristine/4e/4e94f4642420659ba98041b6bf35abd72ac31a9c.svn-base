@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace baeswedding.Models
+{
+    public class GuestModel
+    {
+        public int GuestID { get; set; }
+        public string LastName { get; set; }
+        public string FirstName { get; set; }
+        public string Email { get; set; }
+        public string Comment { get; set; }
+        public string Guest_1_Fname { get; set; }
+        public string Guest_1_Lname { get; set; }
+        public string Guest_2_Fname { get; set; }
+        public string Guest_2_Lname { get; set; }
+        public string Guest_3_Fname { get; set; }
+        public string Guest_3_Lname { get; set; }
+        public string Guest_4_Fname { get; set; }
+        public string Guest_4_Lname { get; set; }
+        public string Guest_5_Fname { get; set; }
+        public string Guest_5_Lname { get; set; }
+        public string Guest_6_Fname { get; set; }
+        public string Guest_6_Lname { get; set; }
+        public string Guest_7_Fname { get; set; }
+        public string Guest_7_Lname { get; set; }
+        public string Guest_8_Fname { get; set; }
+        public string Guest_8_Lname { get; set; }
+        public string Guest_9_Fname { get; set; }
+        public string Guest_9_Lname { get; set; }
+        public string Guest_10_Fname { get; set; }
+        public string Guest_10_Lname { get; set; }
+        public bool Attending { get; set; }
+        //public DateTime Date { get; set; }
+
+    }
+}
